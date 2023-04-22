@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import br.ucsal.models.Laboratory;
 import br.ucsal.models.StatusLaboratory;
+import br.ucsal.repositories.LaboratoryRepository;
 import io.micrometer.common.lang.NonNull;
 import jakarta.annotation.Nonnull;
 

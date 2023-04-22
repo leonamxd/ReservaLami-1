@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.ucsal.dto.TeacherDTO;
 import br.ucsal.models.Teacher;
+import br.ucsal.services.TeacherService;
 import jakarta.validation.Valid;
 
 @RestController

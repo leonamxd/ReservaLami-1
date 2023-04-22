@@ -6,6 +6,7 @@ import br.ucsal.models.Discipline;
 import br.ucsal.models.Laboratory;
 import br.ucsal.models.Reservation;
 import br.ucsal.models.Teacher;
+import br.ucsal.repositories.ReservationRepository;
 
 
 public class ReservationDTO {

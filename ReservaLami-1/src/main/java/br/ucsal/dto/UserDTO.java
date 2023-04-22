@@ -3,6 +3,7 @@ package br.ucsal.dto;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import br.ucsal.models.User;
+import br.ucsal.repositories.UserRepository;
 import jakarta.validation.constraints.NotBlank;
 
 public class UserDTO {

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import br.ucsal.models.Discipline;
 import br.ucsal.models.Teacher;
+import br.ucsal.repositories.TeacherRepository;
 import jakarta.validation.constraints.NotBlank;
 
 public class TeacherDTO {

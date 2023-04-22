@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import br.ucsal.models.Discipline;
 import br.ucsal.models.Laboratory;
+import br.ucsal.repositories.DisciplineRepository;
 
 
 
