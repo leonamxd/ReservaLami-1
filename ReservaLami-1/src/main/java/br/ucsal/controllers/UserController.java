@@ -1,4 +1,4 @@
-package br.ucsal.controller;
+package br.ucsal.controllers;
 
 public class UserController {
 
