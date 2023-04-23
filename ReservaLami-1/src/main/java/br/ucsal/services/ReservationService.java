@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ObjectUtils;
 
+import br.ucsal.exceptions.BussinessException;
 import br.ucsal.models.Reservation;
 import br.ucsal.models.StatusReservation;
 import br.ucsal.repositories.ReservationRepository;
@@ -26,11 +27,11 @@ public class ReservationService {
 		// Verifica disponibilidade do laboratorio
 		if (!laboratoryService.searchAvailability(newReservation.getLaboratory().getId())) {
 			// TODO criar exceptions especificas para erros de negocio
-			throw new Exception("Este labóratório está indisponível para uso.");
+			throw new BussinessException("Este labóratório está indisponível para uso.");
 		}
 		
 		if (!Util.isValidInterval(newReservation.getStartTime(), newReservation.getEndTime())) {
-			throw new Exception("Datas selecionadas não estão em intervalo válido.");
+			throw new BussinessException("Datas selecionadas não estão em intervalo válido.");
 		}
 
 		// Verifica se a disciplina escolhida tem prioridade no laboratorio escolhido
@@ -47,7 +48,7 @@ public class ReservationService {
 					.anyMatch(reservation -> reservation.getDiscipline().equals(newReservation.getDiscipline()));
 
 			if (conflitoPrioridade) {
-				throw new Exception("Já existe reserva para disciplina com prioridade neste laboratório.");
+				throw new BussinessException("Já existe reserva para disciplina com prioridade neste laboratório.");
 			}
 
 			// cancela reservas conflitantes não prioritárias

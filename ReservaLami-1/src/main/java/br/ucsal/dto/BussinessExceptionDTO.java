@@ -1,10 +1,10 @@
 package br.ucsal.dto;
 
-public class CustomExceptionDTO {
+public class BussinessExceptionDTO {
 
 	private String mensage;
 	
-	public CustomExceptionDTO(String mensage) {
+	public BussinessExceptionDTO(String mensage) {
 		this.mensage = mensage;
 	}
 
