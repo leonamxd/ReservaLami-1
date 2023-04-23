@@ -44,5 +44,11 @@ public class Teacher {
 	public void setEmailTeacher(String emailTeacher) {
 		this.emailTeacher = emailTeacher;
 	}
+	public List<Discipline> getDisciplines() {
+		return disciplines;
+	}
+	public void setDisciplines(List<Discipline> disciplines) {
+		this.disciplines = disciplines;
+	}
 }
 

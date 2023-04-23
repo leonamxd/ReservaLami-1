@@ -19,7 +19,7 @@ public class Discipline {
 	private String name;
 
 	private String description;
-	
+
 	@ManyToOne
 	@JoinColumn(name = "laboratory_id")
 	private Laboratory prioritaryLab;

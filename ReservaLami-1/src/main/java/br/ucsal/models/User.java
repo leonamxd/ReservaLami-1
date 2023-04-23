@@ -5,6 +5,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -14,9 +16,15 @@ public class User {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long userId;
+	
 	private String login;
+	
 	private String password;
+	
 	private Profile profile;
+	
+	@ManyToOne
+	@JoinColumn(name = "teacher_id")
 	private Teacher teacher;
 	
 	

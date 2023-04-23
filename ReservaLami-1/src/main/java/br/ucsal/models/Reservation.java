@@ -17,17 +17,23 @@ public class Reservation {
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long reservationId;
+	
 	@ManyToOne
 	@JoinColumn(name = "laboratory_id")
 	private Laboratory laboratory;
+	
 	@ManyToOne
 	@JoinColumn(name = "teacher_id")
 	private Teacher teacher;
+	
 	@ManyToOne
 	@JoinColumn(name = "discipline_id")
 	private Discipline discipline;
+	
 	private LocalDateTime startTime;
+	
 	private LocalDateTime endTime;
+	
 	private StatusReservation statusReservation;
 	
 	

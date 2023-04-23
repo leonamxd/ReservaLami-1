@@ -11,13 +11,13 @@ public class UserService {
 
 	@Autowired
 	private UserRepository userRepository;
-	
+
 //	@Autowired
 //	private TeacherRepository teacherRepository;
-	
+
 	public boolean authenticate(String _userLogin, String _password) {
-		User user = userRepository.findByUserLogin(_userLogin);
-		if(!user.equals(_userLogin)) {
+		User user = userRepository.findByLogin(_userLogin);
+		if (!user.equals(_userLogin)) {
 			return false;
 		}
 		return user.getPassword().equals(_password);
